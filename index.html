@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHISHIR KHATTRI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.png">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container nav-container">
+
+            <h1 class="logo">SHISHIR</h1>
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+            <nav class="nav">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- ABOUT SECTION -->
+
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="text-container">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm Shishir Khattri, a beginner web developer learning HTML and CSS.
+                This is my first portfolio website created for the workshop assignment.
+            </p>
+
+            <p>
+                I enjoy designing clean, minimal, and modern layouts while learning how
+                to properly structure pages using good HTML practices.
+            </p>
+            </div>
+            <img src="images/boy.jpg" alt="Your profile" class="profile-img">
+        </div>
+    </section>
+
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2>Projects</h2>
+
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <a href="project1">
+                    <img src="images/project.jpg" alt="Project 1">
+                    <h3>Project One</h3>
+                    <p>This was one of my first HTML pages. I learned how to structure text and images.</p>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <a href="project2">
+                    <img src="images/project.jpg" alt="Project 2">
+                    <h3>Project Two</h3>
+                    <p>I practiced using CSS padding, margin, borders, and layout techniques.</p>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <a href="project3">
+                    <img src="images/project.jpg" alt="Project 3">
+                    <h3>Project Three</h3>
+                    <p>I experimented with colors, backgrounds, and hover effects.</p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+
+            <form class="contact-form">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" required>
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy 2025 SHISHIR — Built with HTML & CSS</p>
+    </footer>
+
+</body>
+</html>
