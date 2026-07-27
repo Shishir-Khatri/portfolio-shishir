@@ -19,34 +19,33 @@ export default function Contact() {
     setStatus('submitting');
 
     try {
-      // Send form data to Formspree endpoint targeting shishirkhattri444@gmail.com
-      const response = await fetch('https://formspree.io/f/shishirkhattri444@gmail.com', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
         body: JSON.stringify({
+          access_key: 'f9c3a471-bc44-4269-978b-a63414f693ac',
           name: formData.name,
           email: formData.email,
           subject: formData.subject,
           message: formData.message,
-          _replyto: formData.email
+          from_name: formData.name,
+          replyto: formData.email
         })
       });
 
-      if (response.ok || response.status === 200 || response.status === 302) {
+      const result = await response.json();
+
+      if (result.success) {
         setStatus('success');
         setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
-        // Fallback for Formspree unverified email setup - simulate fallback mailto or success notice
-        setStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' });
+        setStatus('error');
       }
     } catch (err) {
-      // In case of offline/CORS, provide graceful state
-      setStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      setStatus('error');
     }
   };
 
@@ -89,6 +88,17 @@ export default function Contact() {
               <p>Thank you for getting in touch. Your message has been routed to <strong>shishirkhattri444@gmail.com</strong>. I'll get back to you shortly!</p>
               <button className="btn btn-ghost" onClick={() => setStatus('idle')}>
                 Send another message
+              </button>
+            </div>
+          ) : status === 'error' ? (
+            <div className="form-success">
+              <div className="success-icon" style={{ color: '#ef4444' }}>
+                <i className="fa-solid fa-circle-xmark" />
+              </div>
+              <h3>Something went wrong</h3>
+              <p>Your message couldn't be sent. Please try again or email me directly at <strong>shishirkhattri444@gmail.com</strong>.</p>
+              <button className="btn btn-ghost" onClick={() => setStatus('idle')}>
+                Try again
               </button>
             </div>
           ) : (
