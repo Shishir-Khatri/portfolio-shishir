@@ -2,25 +2,25 @@ import React from 'react';
 
 const PROJECTS = [
   {
-    tag: 'AI Automation',
+    tag: 'Automation',
     n: '01',
-    t: 'AutoFlow AI Engine',
-    d: 'Autonomous multi-agent workflow pipeline integrating n8n, OpenAI API, and webhooks for real-time task orchestration.',
-    stack: ['n8n', 'Python', 'OpenAI API', 'Webhooks']
+    t: 'Workflow Automation System',
+    d: 'Automated workflows using n8n connecting Gmail, Google Sheets, and Slack — eliminating repetitive tasks through scheduled and event-driven automation with third-party API integrations.',
+    stack: ['n8n', 'Gmail API', 'Google Sheets', 'Slack']
   },
   {
-    tag: 'Full-Stack AI',
+    tag: 'Full-Stack Web',
     n: '02',
-    t: 'Sajilo Notes AI',
-    d: 'Collaborative student note-taking platform empowered by real-time AI summarization and semantic RAG search.',
-    stack: ['React', 'Node.js', 'MongoDB', 'RAG AI']
+    t: 'Event Management System',
+    d: 'Full-stack event management platform with voice-powered search, user authentication, and dynamic event CRUD operations built on a Node.js backend.',
+    stack: ['Node.js', 'Express.js', 'EJS', 'Web Speech API', 'MongoDB']
   },
   {
-    tag: 'Data & ML',
+    tag: 'Backend & Database',
     n: '03',
-    t: 'Himal Climate ML',
-    d: 'Interactive dashboard visualising climate patterns across Nepal using automated data scrapers and ML forecasting.',
-    stack: ['Python', 'TensorFlow', 'Chart.js', 'REST']
+    t: 'Student Record Management System',
+    d: 'Comprehensive student record management application featuring full CRUD operations with a relational database backend for efficient data handling.',
+    stack: ['PHP', 'Twig', 'MySQL', 'CRUD']
   },
   {
     tag: 'Full-Stack Web',
