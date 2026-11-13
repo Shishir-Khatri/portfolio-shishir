@@ -31,8 +31,8 @@ export default function Header() {
       <div className="nav-actions">
         {/* Downloadable Resume button replacing theme dropdown */}
         <a
-          href="/Shishir_Khattri_Resume.pdf"
-          download="Shishir_Khattri_Resume.pdf"
+          href="/CV.pdf"
+          download="CV.pdf"
           className="resume-btn"
           aria-label="Download Resume"
           title="Download Resume"
